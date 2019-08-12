@@ -1,4 +1,5 @@
 class Event < ApplicationRecord
+
 	belongs_to :admin, class_name: "User"
 	has_many :attendances
 	has_many :users, through: :attendances
@@ -11,7 +12,7 @@ class Event < ApplicationRecord
 	validate :multiple_of_5?
 
 	def multiple_of_5?
-		if duration%5 != 0
+		if duration % 5 != 0
 			errors.add(:duration, "La durée n'est pas un multiple de 5")
 		end
 	end
