@@ -1,0 +1,5 @@
+<h1>Event: <%= @event.title%></h1><br>
+<h3>Date de création: <%= @event.created_at%></h3>
+<h3>Description:  "<%= @event.description%>"</h3>
+<h3>Créateur de l'évènement: <%= @event.admin.first_name%></h3>
+<%= link_to "Retour a la page d'accueil", events_path %>

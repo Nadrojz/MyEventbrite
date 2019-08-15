@@ -18,6 +18,9 @@
       <h5 class="card-title">Nom de l'event : <%= event.title %></h5>
       <p class="card-text">Lieu : <%= event.location %></p>
       <p class="card-text">Date de début : <%= event.start_date %></p>
+      <div class="btn-btn-primary">
+        <%=link_to "Lien vers l'event", event_path(event.id) %>
+      </div>
     </div>
   </div>
 
